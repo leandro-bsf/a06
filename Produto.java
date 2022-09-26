@@ -1,13 +1,16 @@
 public class Produto{
+    public static int cont ;
     String Nome;
     float Preco;
     int Codigo;
     
-    public Produto(String nome, float preco, int quantidade, int codigo) {
+    public Produto(String nome, float preco) {
+        ++cont;
         Nome = nome;
         Preco = preco;
+        Codigo = cont;
        
-        extracted(codigo);
+
     }
     private int extracted(int codigo) {
         return Codigo = codigo;
@@ -32,7 +35,7 @@ public class Produto{
         extracted(codigo);
     }
     public void  print (){
-        System.out.printf("Codigo: %d - nome: %s - Preco: %f",
+        System.out.printf("Codigo: %d - nome: %s - Preco: %f \n",
         this.getCodigo(), this.getNome(),  this.getPreco() );
     }
        

@@ -1,8 +1,10 @@
 public class Cliente {
+    public static int cont ;
     int Codigo;
     String Nome , Cpf;
-     public Cliente(int codigo, String nome , String cpf){
-         this.Codigo = codigo;
+     public Cliente( String nome , String cpf){
+        ++cont;
+         this.Codigo = cont;
          this.Nome = nome;
          this.Cpf = cpf;
      }
@@ -25,7 +27,7 @@ public class Cliente {
         Cpf = cpf;
     }
     public void print(){
-        System.out.printf("Codigo: %d - nome: %s - CPF: %s",
+        System.out.printf("Codigo: %d - nome: %s - CPF: %s\n",
          this.getCodigo() , this.getNome() , this.getCpf());
     }
 
