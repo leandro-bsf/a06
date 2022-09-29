@@ -3,13 +3,14 @@ public class Produto{
     String Nome;
     float Preco;
     int Codigo;
+    int quantidade;
     
-    public Produto(String nome, float preco) {
+    public Produto(String nome, float preco, int quantidade) {
         ++cont;
         Nome = nome;
         Preco = preco;
         Codigo = cont;
-       
+       this.quantidade = quantidade;
 
     }
     private int extracted(int codigo) {
@@ -34,9 +35,18 @@ public class Produto{
     public void setCodigo(int codigo) {
         extracted(codigo);
     }
+    public int getQuantidade() {
+        return quantidade;
+    }
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
     public void  print (){
-        System.out.printf("Codigo: %d - nome: %s - Preco: %f \n",
-        this.getCodigo(), this.getNome(),  this.getPreco() );
+        //float total = 0;
+       // total += quantidade * getPreco();
+        System.out.printf("Codigo: %d - nome: %s - Preco: %f  - Quantidade: %d \n",
+        this.getCodigo(), this.getNome(),  this.getPreco(), getQuantidade() );
+       // System.out.printf("total: %f", total);
     }
        
         
